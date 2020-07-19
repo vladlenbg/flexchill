@@ -18,7 +18,7 @@ class WeatherMod(loader.Module):
     async def client_ready(self, client, db):
         self.client = client
 
-    @loader.sudo
+    @loader.unrestricted
     async def weathercmd(self, message):
         """.weather <city> for weather"""
         message.edit("<b>Weather by wttr.in</b>")
