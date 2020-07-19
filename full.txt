@@ -5,6 +5,7 @@ demot
 distortion_no_api
 eval
 filetoimg
+filters
 fl
 jpeg
 lines
