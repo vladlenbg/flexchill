@@ -6,21 +6,21 @@ logger = logging.getLogger(__name__)
 
 
 def register(cb):
-    cb(WWTrMod())
+    cb(WeatherMod())
 
 
 @loader.tds
-class WWWTrMod(loader.Module):
-    """wttr.in"""
+class WeatherMod(loader.Module):
+    """Gets weather info from wttr.in"""
 
-    strings = {"name": "wttr"}
+    strings = {"name": "Weather"}
 
     async def client_ready(self, client, db):
         self.client = client
 
-    @loader.sudo
-    async def wttrcmd(self, message):
-        """.wttr <city> for weather"""
+    @loader.unrestricted
+    async def weathercmd(self, message):
+        """.weather <city> for weather"""
         message.edit("<b>Weather by wttr.in</b>")
         city = utils.get_args(message)
         msg = []
