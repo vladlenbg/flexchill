@@ -61,4 +61,4 @@ class ShortMod(loader.Module):
         if req["error"]:
             await utils.answer(message, self.strings("error", message).format(req["msg"]))
         else:
-            await utils.answer(message, self.strings("result", message).format(req["short"]))
+            await utils.answer(message, self.strings("result", message).format(shrt["short"]))
