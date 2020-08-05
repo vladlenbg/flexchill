@@ -38,10 +38,10 @@ class ShortMod(loader.Module):
 
     def __init__(self):
         self.config = loader.ModuleConfig("CLIENT_KEY", "KEY", lambda m: self.strings("doc_client_key", m),
-                                          "API_URL", "https://hydrugz.live/red/api/", lambda m: self.strings("doc_api_url", m))
+                                          "API_URL", "https://kutr.ml/api/", lambda m: self.strings("doc_api_url", m))
 
     async def shortcmd(self, message):
-        """.short <count>"""
+        """.short <link>"""
         args = utils.get_args(message)
         if len(args) == 0:
             await utils.answer(message, self.strings("need_link", message))
@@ -52,7 +52,8 @@ class ShortMod(loader.Module):
         params = {"url": args[0],
                   "key": self.config["CLIENT_KEY"]}
         req = json.loads(requests.get(self.config["API_URL"], params=params).text)
+        shrt = re.sub('hydrugz.live/red/', 'kutr.ml/', str(req))
         if req["error"]:
             await utils.answer(message, self.strings("error", message).format(req["msg"]))
         else:
-            await utils.answer(message, self.strings("result", message).format(req["short"]))
+            await utils.answer(message, self.strings("result", message).format(shrt["short"]))
