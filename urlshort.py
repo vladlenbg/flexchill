@@ -31,7 +31,7 @@ class ShortMod(loader.Module):
     strings = {"name": "Shorter",
                "need_link": "<b>Не указана ссылка</b>",
                "key_not_found": "<b>API ключ не найден</b>",
-               "result": "<b>Ссылка:</b>{}",
+               "result": "<b>Ссылка: </b>{}",
                "error": "<b>Ошибка:</b> {}",
                "doc_client_key": "Ключик из https://hydrugz.live/red/user/tools (Development API)",
                "doc_api_url": "Адрес АПИ"}
