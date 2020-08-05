@@ -57,8 +57,8 @@ class ShortMod(loader.Module):
         params = {"url": url,
                   "key": self.config["CLIENT_KEY"]}
         req = json.loads(requests.get(self.config["API_URL"], params=params).text)
-        shrt = re.sub('hydrugz.live/red/', 'kutr.ml/', str(req))
-        if req["error"]:
-            await utils.answer(message, self.strings("error", message).format(req["msg"]))
+        shrt = re.sub('hydrugz.live/red/', 'kutr.ml/', req)
+        if shrt["error"]:
+            await utils.answer(message, self.strings("error", message).format(shrt["msg"]))
         else:
             await utils.answer(message, self.strings("result", message).format(shrt["short"]))
