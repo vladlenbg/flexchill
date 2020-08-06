@@ -31,7 +31,7 @@ class ShortMod(loader.Module):
     """Shorting long URL's"""
     strings = {"name": "Shorter",
                "need_link": "<b>Ссылка не указана</b>",
-               "key_not_found": "<b>API ключ не найден</b>",
+               "key_not_found": "<b>API ключ не найден [kutr.ml/get_api]</b>",
                "result": "<b>Ссылка:</b> {}",
                "error": "<b>Ошибка:</b> {}",
                "doc_client_key": "Ключ из https://hydrugz.live/red/user/tools (Development API)",
