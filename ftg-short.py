@@ -61,4 +61,4 @@ class ShortMod(loader.Module):
         if shrt["error"]:
             await utils.answer(message, self.strings("error", message).format(shrt["msg"]))
         else:
-            await utils.answer(message, self.strings("result", message).format(shrt["short"].replace("hydrugz.live/red/", "kutr.ml/")))
+            await utils.answer(message, self.strings("result", message).format(shrt["short"].replace("https://hydrugz.live/red/", "kutr.ml/")))
