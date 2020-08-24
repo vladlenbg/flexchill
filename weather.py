@@ -25,14 +25,14 @@ class WeatherMod(loader.Module):
         city = utils.get_args(message)
         msg = []
         if city:
-            await utils.answer(message, "Getting weather...")
+            await message.send("Getting weather...")
             for i in city:
                 r = requests.get(
                     "https://wttr.in/" + i + "?format=%l:+%c+%t,+%w+%m&m"
                 )
                 msg.append(r.text)
-            await utils.edit(message, "".join(msg))
+            await message.edit("".join(msg))
         else:
-            await utils.answer(message, "Getting weather...")
+            await message.send("Getting weather...")
             r = requests.get("https://wttr.in/?format=%l:+%c+%t,+%w+%m&m")
-            await utils.edit(message, r.text)
+            await message.edit(r.text)
