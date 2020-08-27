@@ -22,7 +22,7 @@ cum - .demot (replay photo/stickers)
 ТАК ЖЕ ПОЗВОЛЯЕТ ДЕЛАТЬ ЭТО В 2 СТРОКИ, .demot он сосал & его сосали
 
 # destroyesho.py - ещё один дестрой
-cum - .dlstroy
+cum - .dlstort
 
 # distortion_no_api.py - Дистортит фото или стикеров. Простыми словами - шакалит их.
 cum .d 40 <- чем больше число - тем флексовее.
