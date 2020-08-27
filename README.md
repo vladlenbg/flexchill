@@ -22,6 +22,8 @@ cum .d 40 <- чем больше число - тем флексовее.
 # jpeg.py - Соблюдение всех стандартов сжатия при помощи расширения .jpeg
 cum - .jpeg (replay photo/stickers)
 
+# kang.py - Канг месаги в ваш стикер хуяк
+cum - .kang
 
 # linesphoto.py - Рисует линии поверх фото.
 cum - .line Работает через бота t.me/BlackLinesBot
