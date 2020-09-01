@@ -24,7 +24,7 @@ import telethon
 import requests, io, PIL
 from telethon.tl.types import (MessageEntityBold, MessageEntityItalic,
 							   MessageEntityMention, MessageEntityTextUrl,
-							   MessageEntityCode, MessageEntityMentionName, MessageEntityPre, 
+							   MessageEntityCode, MessageEntityMentionName,
 							   MessageEntityHashtag, MessageEntityCashtag,
 							   MessageEntityBotCommand, MessageEntityUrl,
 							   MessageEntityStrike, MessageEntityUnderline,
@@ -297,7 +297,7 @@ def parse_entities(reply):
 			etype = 'italic'
 		elif entity_type in [MessageEntityUrl, MessageEntityPhone]:
 			etype = 'url'
-		elif entity_type in [MessageEntityCode, MessageEntityPre]:
+		elif entity_type is MessageEntityCode:
 			etype = 'monospace'
 		elif entity_type is MessageEntityStrike:
 			etype = 'strikethrough'
@@ -336,3 +336,4 @@ async def check_media(message, reply):
 		except:
 			return None
 		
+
